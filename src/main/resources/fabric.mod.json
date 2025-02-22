@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mitaine",
+  "version": "${version}",
+  "name": "Mitaine",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mitaine/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.mitaine.client.mainClient"
+    ],
+    "main": [
+      "net.mitaine.main"
+    ]
+  },
+  "mixins": [
+    "mitaine.mixins.json",
+    {
+      "config": "mitaine.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
