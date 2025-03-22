@@ -14,7 +14,7 @@
       "net.mitaine.client.mainClient"
     ],
     "main": [
-      "net.mitaine.main"
+      "net.mitaine.mitaine"
     ]
   },
   "mixins": [
