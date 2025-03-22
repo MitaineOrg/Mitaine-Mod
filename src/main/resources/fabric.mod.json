@@ -11,18 +11,14 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "net.mitaine.client.mainClient"
+      "net.mitaine.mitaineClient"
     ],
     "main": [
       "net.mitaine.mitaine"
     ]
   },
   "mixins": [
-    "mitaine.mixins.json",
-    {
-      "config": "mitaine.client.mixins.json",
-      "environment": "client"
-    }
+    "mitaine.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
