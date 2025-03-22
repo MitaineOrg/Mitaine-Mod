@@ -12,7 +12,7 @@ import net.mitaine.Mitaine;
 public class ModItemGroups {
 
     public static final ItemGroup MITAINE_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(Mitaine.MOD_ID, "Mitaine"),
+            new Identifier(Mitaine.MOD_ID, "mitaine"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.mitaine"))
                     .icon(() -> new ItemStack(ModItems.TEST)).entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST);
