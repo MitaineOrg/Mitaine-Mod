@@ -1,3 +1,5 @@
 {
-  "item.mitaine.test": "Test"
+  "item.mitaine.test": "Test",
+
+  "itemgroup.mitaine" : "Mitaine"
 }

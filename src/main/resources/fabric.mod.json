@@ -3,18 +3,20 @@
   "id": "mitaine",
   "version": "${version}",
   "name": "Mitaine",
-  "description": "",
-  "authors": [],
+  "description": "Mitaine mod for season 7",
+  "authors": [
+    "Skyspirit"
+  ],
   "contact": {},
   "license": "All-Rights-Reserved",
   "icon": "assets/mitaine/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "net.mitaine.mitaineClient"
-    ],
     "main": [
-      "net.mitaine.mitaine"
+      "net.mitaine.Mitaine"
+    ],
+    "client": [
+      "net.mitaine.MitaineClient"
     ]
   },
   "mixins": [

@@ -8,23 +8,23 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.mitaine.mitaine;
+import net.mitaine.Mitaine;
 
 public class ModItems {
-    public static final Item TEST = register("test", new Item(new FabricItemSettings()));
+    public static final Item TEST = registerItem("test", new Item(new FabricItemSettings()));
 
     private static void addItemToIngredientTab(FabricItemGroupEntries entries) {
         entries.add(TEST);
     }
 
-    public static Item register(String name, Item item) {
+    public static Item registerItem(String name, Item item) {
 
-        Identifier itemName = new Identifier(mitaine.MOD_ID, name);
+        Identifier itemName = new Identifier(Mitaine.MOD_ID, name);
         return Registry.register(Registries.ITEM, itemName, item);
     }
 
     public static void registerModItems() {
-        mitaine.LOGGER.info("Registering Mod Items : " + mitaine.MOD_ID);
+        Mitaine.LOGGER.info("Registering Mod Items : " + Mitaine.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToIngredientTab);
     }
