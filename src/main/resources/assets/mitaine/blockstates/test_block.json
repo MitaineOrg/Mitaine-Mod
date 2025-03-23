@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mitaine:block/test_block"
+    }
+  }
+}

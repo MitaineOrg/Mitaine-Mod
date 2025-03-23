@@ -18,9 +18,7 @@ public class ModItems {
     }
 
     public static Item registerItem(String name, Item item) {
-
-        Identifier itemName = new Identifier(Mitaine.MOD_ID, name);
-        return Registry.register(Registries.ITEM, itemName, item);
+        return Registry.register(Registries.ITEM, new Identifier(Mitaine.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

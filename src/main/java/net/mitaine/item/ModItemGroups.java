@@ -8,6 +8,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mitaine.Mitaine;
+import net.mitaine.block.ModBlocks;
 
 public class ModItemGroups {
 
@@ -16,7 +17,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.mitaine"))
                     .icon(() -> new ItemStack(ModItems.TEST)).entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST);
-
+                        entries.add(ModBlocks.TEST_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {
