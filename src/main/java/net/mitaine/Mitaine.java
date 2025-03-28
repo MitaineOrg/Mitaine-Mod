@@ -11,5 +11,7 @@ public class Mitaine implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Test loading");
+
+
     }
 }
