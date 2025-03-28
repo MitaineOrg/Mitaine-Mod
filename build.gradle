@@ -39,6 +39,8 @@ repositories {
     maven { url = "https://maven.blamejared.com" } // JEI
 
     maven { url = "https://maven.terraformersmc.com/releases" } // Mod Menu, EMI
+
+    maven { url = "https://squiddev.cc/maven"} // CC:Tweaked
 }
 
 configurations.configureEach {
@@ -62,6 +64,9 @@ dependencies {
 
     // numismatics
     modImplementation "dev.ithundxr.createnumismatics:CreateNumismatics-fabric-$project.minecraft_version:$project.numismatics_version"
+
+    // computercraft
+    modLocalRuntime("cc.tweaked:cc-tweaked-$project.minecraft_version-fabric:${project.cc_version}")
 
     // modmenu
     modLocalRuntime("com.terraformersmc:modmenu:$project.modmenu_version")
@@ -130,15 +135,9 @@ publishing {
         // retrieving dependencies.
     }
 }
-/*
-gradle.projectsLoaded {
-    rootProject.allprojects {
-        configurations.all {
-            resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-        }
-    }
-}
 
-gradle.startParameter.buildCache = false
-*/
-rootProject.buildDir = file("/tmp/build")
+import org.apache.tools.ant.taskdefs.condition.Os
+
+if (Os.isFamily(Os.FAMILY_UNIX)) {
+    rootProject.buildDir = file("/tmp/build")
+}
