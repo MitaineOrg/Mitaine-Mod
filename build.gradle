@@ -60,6 +60,9 @@ dependencies {
     // create
     modImplementation("com.simibubi.create:create-fabric-$project.minecraft_version:$project.create_version")
 
+    // numismatics
+    modImplementation "dev.ithundxr.createnumismatics:CreateNumismatics-fabric-$project.minecraft_version:$project.numismatics_version"
+
     // modmenu
     modLocalRuntime("com.terraformersmc:modmenu:$project.modmenu_version")
 
@@ -127,3 +130,15 @@ publishing {
         // retrieving dependencies.
     }
 }
+/*
+gradle.projectsLoaded {
+    rootProject.allprojects {
+        configurations.all {
+            resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+        }
+    }
+}
+
+gradle.startParameter.buildCache = false
+*/
+rootProject.buildDir = file("/tmp/build")
