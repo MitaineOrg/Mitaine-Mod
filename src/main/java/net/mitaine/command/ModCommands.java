@@ -6,5 +6,6 @@ public class ModCommands {
 
     public static void registerCommands() {
         BraodcastCommand.register();
+        PlayerNameCommand.register();
     }
 }
