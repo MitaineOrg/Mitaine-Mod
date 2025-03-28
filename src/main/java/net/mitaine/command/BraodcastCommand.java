@@ -16,8 +16,10 @@ public class BraodcastCommand {
                     .requires(serverCommandSource -> serverCommandSource.hasPermissionLevel(2))
                         .then(CommandManager.argument("message", StringArgumentType.greedyString())
                             .executes(context -> {
-                                String msg = "§6[Mitaine] §r" + StringArgumentType.getString(context, "message");
-                                if (Objects.equals(msg, "§6[Mitaine] §r")) {
+                                String msg = "§6[§2Mitaine§6] §r" + StringArgumentType.getString(context, "message");
+                                msg = msg.replace("/##", "§r");
+                                msg = msg.replace("##", "§l§3");
+                                if (Objects.equals(msg, "§6[§2Mitaine] §r")) {
                                     context.getSource().sendMessage(Text.literal("§c using : /broadcast <message>"));
                                 } else {
                                     for (PlayerEntity player : context.getSource().getServer().getPlayerManager().getPlayerList()) {
