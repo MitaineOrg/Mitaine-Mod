@@ -16,18 +16,18 @@ public class BraodcastCommand {
                     .requires(serverCommandSource -> serverCommandSource.hasPermissionLevel(2))
                         .then(CommandManager.argument("message", StringArgumentType.greedyString())
                             .executes(context -> {
-                                String msg = "§6[§2Mitaine§6] §r" + StringArgumentType.getString(context, "message");
-                                msg = msg.replace("/##", "§r");
-                                msg = msg.replace("##", "§l§3");
-                                if (Objects.equals(msg, "§6[§2Mitaine] §r")) {
-                                    context.getSource().sendMessage(Text.literal("§c using : /broadcast <message>"));
-                                } else {
-                                    for (PlayerEntity player : context.getSource().getServer().getPlayerManager().getPlayerList()) {
-                                        player.sendMessage(Text.literal(msg));
-                                    }
+                                String msg = "------ §6[§2Mitaine§6]§r ------\n" + StringArgumentType.getString(context, "message") + "\n---------------------";
+                                msg = msg.replace("£", "§");
+                                msg = msg.replace("<br>", "\n");
+                                for (PlayerEntity player : context.getSource().getServer().getPlayerManager().getPlayerList()) {
+                                    player.sendMessage(Text.literal(msg));
                                 }
                                 return 1;
-                            })));
+                            }))
+                    .executes(context -> {
+                        context.getSource().sendMessage(Text.literal("§cusing : /broadcast <message> §r(replacing £ to paragraph char and <br> to a new line"));
+                        return 1;
+                    }));
         });
     }
 }
