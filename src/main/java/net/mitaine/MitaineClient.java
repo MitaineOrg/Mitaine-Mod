@@ -12,10 +12,5 @@ public class MitaineClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ModItemGroups.registerItemGroups();
-        ModItems.registerModItems();
-        ModBlocks.registerModBlocks();
-
-        ModCommands.registerCommands();
     }
 }
