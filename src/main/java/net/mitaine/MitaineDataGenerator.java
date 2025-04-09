@@ -8,6 +8,7 @@ public class MitaineDataGenerator implements DataGeneratorEntrypoint {
 
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        Mitaine.LOGGER.info("Loading Data generator ====================");
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(ModPoiTagProvider::new);

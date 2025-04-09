@@ -19,6 +19,7 @@ public class Mitaine implements ModInitializer {
         LOGGER.info("Test loading");
 
         ModItemGroups.registerItemGroups();
+
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
 

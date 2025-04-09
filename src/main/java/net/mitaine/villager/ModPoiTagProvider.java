@@ -12,13 +12,14 @@ import net.mitaine.Mitaine;
 import java.util.concurrent.CompletableFuture;
 
 public class ModPoiTagProvider extends TagProvider<PointOfInterestType> {
-    public ModPoiTagProvider(DataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookupFuture) {
+    public ModPoiTagProvider(DataOutput output,
+                             CompletableFuture<RegistryWrapper.WrapperLookup> registryLookupFuture) {
         super(output, RegistryKeys.POINT_OF_INTEREST_TYPE, registryLookupFuture);
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         this.getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE)
-                .addOptional(new Identifier(Mitaine.MOD_ID, "custompoi"));
+                .addOptional(new Identifier(Mitaine.MOD_ID, "testpoi"));
     }
 }

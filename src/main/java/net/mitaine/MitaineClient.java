@@ -12,5 +12,6 @@ public class MitaineClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        Mitaine.LOGGER.info("MitaineClient initialized");
     }
 }

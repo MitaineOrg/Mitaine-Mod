@@ -3,6 +3,7 @@ package net.mitaine.villager;
 import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -15,15 +16,16 @@ import net.mitaine.Mitaine;
 import net.mitaine.block.ModBlocks;
 
 public class ModVillagers {
-    public static final RegistryKey<PointOfInterestType> CUSTOM_POI_KEY = poiKey("custompoi");
-    public static final PointOfInterestType CUSTOM_POI = registerPoi("custompoi", ModBlocks.TEST_BLOCK);
+    public static final RegistryKey<PointOfInterestType> TEST_POI_KEY = poiKey("testpoi");
+    public static final PointOfInterestType TEST_POI = registerPoi("testpoi", ModBlocks.TEST_BLOCK);
 
-    public static final VillagerProfession CUSTOM_VENDOR = registerProfession("custom_vendor", CUSTOM_POI_KEY);
+    public static final VillagerProfession TEST_VENDOR = registerProfession("testvendor", TEST_POI_KEY);
+
 
     private static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
         return Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(Mitaine.MOD_ID, name),
                 new VillagerProfession(name, entry -> entry.matchesKey(type), entry -> entry.matchesKey(type),
-                        ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_ARMORER));
+                        ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_SHEPHERD));
     }
 
     private static PointOfInterestType registerPoi(String name, Block block) {
@@ -35,6 +37,6 @@ public class ModVillagers {
     }
 
     public static void registerVillagers() {
-        Mitaine.LOGGER.info("Register Villagers");
+        Mitaine.LOGGER.info("Registering Villagers " + Mitaine.MOD_ID);
     }
 }

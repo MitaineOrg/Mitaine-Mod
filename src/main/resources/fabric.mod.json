@@ -17,6 +17,9 @@
     ],
     "client": [
       "net.mitaine.MitaineClient"
+    ],
+    "fabric-datagen": [
+      "net.mitaine.MitaineDataGenerator"
     ]
   },
   "mixins": [

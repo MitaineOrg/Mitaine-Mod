@@ -2,7 +2,7 @@
   "item.mitaine.test": "Test",
   "block.mitaine.test_block": "Test Block",
 
-  "itemgroup.mitaine": "Mitaine",
+  "entity.minecraft.villager.testvendor": "TestVendor",
 
-  "entity.minecraft.villager.custom_vendor": "Custom Vendor"
+  "itemgroup.mitaine": "Mitaine"
 }

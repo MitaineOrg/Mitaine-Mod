@@ -76,6 +76,10 @@ dependencies {
     modCompileOnly("mezz.jei:jei-$minecraft_version-common:$project.jei_version")
 }
 
+fabricApi {
+    configureDataGeneration()
+}
+
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
