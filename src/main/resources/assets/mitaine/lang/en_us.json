@@ -1,6 +1,10 @@
 {
   "item.mitaine.test": "Test",
   "block.mitaine.test_block": "Test Block",
+  "block.mitaine.woodsman_sell_point": "Woodsman Sell Point",
+  "block.mitaine.forge_sell_point": "Forge Sell Point",
+  "block.mitaine.engineer_sell_point": "Engineer Sell Point",
+  "block.mitaine.chef_sell_point": "Chef Sell Point",
 
   "entity.minecraft.villager.testvendor": "TestVendor",
 

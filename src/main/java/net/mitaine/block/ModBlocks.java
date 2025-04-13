@@ -10,11 +10,21 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.mitaine.Mitaine;
+import net.mitaine.block.custom.SellPoint;
 
 public class ModBlocks {
 
     public static final Block TEST_BLOCK = registerBlock("test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
+    public static final Block WOODSMAN_SELL_POINT = registerBlock("woodsman_sell_point",
+            new SellPoint(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
+    public static final Block FORGE_SELL_POINT = registerBlock("forge_sell_point",
+            new SellPoint(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
+    public static final Block ENGINEER_SELL_POINT = registerBlock("engineer_sell_point",
+            new SellPoint(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
+    public static final Block CHEF_SELL_POINT = registerBlock("chef_sell_point",
+            new SellPoint(FabricBlockSettings.copyOf(Blocks.BEDROCK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

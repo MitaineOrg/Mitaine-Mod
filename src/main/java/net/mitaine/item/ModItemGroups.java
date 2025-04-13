@@ -17,7 +17,13 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.mitaine"))
                     .icon(() -> new ItemStack(ModItems.TEST)).entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST);
+
                         entries.add(ModBlocks.TEST_BLOCK);
+
+                        entries.add(ModBlocks.WOODSMAN_SELL_POINT);
+                        entries.add(ModBlocks.FORGE_SELL_POINT);
+                        entries.add(ModBlocks.ENGINEER_SELL_POINT);
+                        entries.add(ModBlocks.CHEF_SELL_POINT);
                     }).build());
 
     public static void registerItemGroups() {
